@@ -26,3 +26,14 @@
     width: auto;
   }
 }
+
+.text {
+  text-align: center;
+  position: relative;
+  margin-bottom: 65px;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: 'Russo One';
+}
