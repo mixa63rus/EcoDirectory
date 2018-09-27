@@ -17,21 +17,21 @@ export default class CustomForm extends Component {
                 <h4><b>
                     <span style={{ color: "#FF0000"}}>С</span>
                     <span style={{ color: "#FF6600"}}>П</span>    
-                    <span style={{ color: "#FFFF00"}}>Р</span>    
+                    <span style={{ color: "#D0970B"}}>Р</span>    
                     <span style={{ color: "#008000"}}>А</span>    
                     <span style={{ color: "#00FFFF"}}>В</span>    
                     <span style={{ color: "#0000FF"}}>О</span>    
                     <span style={{ color: "#9933FF"}}>Ч</span>    
                     <span style={{ color: "#FF0000"}}>Н</span>    
                     <span style={{ color: "#FF6600"}}>И</span>    
-                    <span style={{ color: "#FFFF00"}}>К </span>    
+                    <span style={{ color: "#D0970B"}}>К </span>    
                     <span style={{ color: "#008000"}}>П</span>    
                     <span style={{ color: "#00FFFF"}}>О </span>    
                     <span style={{ color: "#0000FF"}}>О</span>    
                     <span style={{ color: "#9933FF"}}>Т</span>    
                     <span style={{ color: "#FF0000"}}>Х</span>    
                     <span style={{ color: "#FF6600"}}>О</span>    
-                    <span style={{ color: "#FFFF00"}}>Д</span>    
+                    <span style={{ color: "#D0970B"}}>Д</span>    
                     <span style={{ color: "#008000"}}>А</span>    
                     <span style={{ color: "#00FFFF"}}>М</span>    
                 </b></h4>
