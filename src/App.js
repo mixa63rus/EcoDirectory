@@ -1,39 +1,48 @@
 import React, { Component } from 'react';
-import MainSelect from './Components/MainSelect';
-import CustomSelect from './Components/CustomSelect';
-// import CustomNavbar from './CustomNavbar';
+import { options } from './Components/elements';
+import MainForm from './Components/MainForm';
+import CustomForm from './Components/CustomForm';
 import './App.css';
 
 class App extends Component {
   state = {
-    selectedOption: null,
+    value: "",
+    data: options,
+    active: true,
   }
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
+  handleChange = (e) => {
+    this.setState({ value: e.target.value.toLowerCase() });
+  }
+
+  handleClickMain = (e) => {
+    e.preventDefault();
+    this.setState({ active: false });
+  }
+
+  handleClickCustom = (e) => {
+    e.preventDefault();
   }
   
   render() {
-    const { selectedOption } = this.state;
+    const { value, active, data } = this.state;
 
     return (
-      <div className="App">
-        {!selectedOption ? 
-          <div className="block">
-            <div className="text font-effect-grass">
-              <h1><b>Справочник по отходам</b></h1>
-            </div>
-            <MainSelect
-              value={selectedOption}
-              onChange={this.handleChange}
-            />
-          </div>
-          : <div className="afterblock"><CustomSelect /></div>}
-          {/* <div className="info">
-            {this.state.selectedOption ? <p>{this.state.selectedOption.value}</p> : null}
-          </div> */}
-        </div>
+      <div>
+      {active ?
+        <MainForm 
+          value={value}
+          onChange={this.handleChange}
+          onClick={this.handleClickMain}
+          />
+          :
+          <CustomForm 
+            value={value}
+            onChange={this.handleChange}
+            onClick={this.handleClickCustom}
+            data={data}
+          />}
+      </div>
     );
   }
 }
