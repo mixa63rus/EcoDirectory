@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ value: e.target.value });
+    this.setState({ value: e.target.value.toLowerCase() });
   }
 
   handleClickMain = (e) => {

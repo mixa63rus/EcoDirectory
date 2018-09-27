@@ -1,9 +1,8 @@
 .mainfinder {
-  width: 50%;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 50%;
-  right: 25%;
-  left: 25%;
+  top: 30%;
   overflow: auto;
   white-space: nowrap;
   text-align: center;
@@ -15,18 +14,22 @@
   vertical-align: middle;
 }
 
+.form-group {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  right: 25%;
+}
+
 .form-control {
   color: black;
 }
-
-/* .input-group-btn:last-child>.btn {
-  height: 54px;
-} */
 
 .ford {
   width: 25%;
   margin-top: 15px;
   margin-left: 15px;
+  margin-bottom: 15px;
   height: 34px;
 }
 
@@ -36,6 +39,30 @@
   box-shadow: none;
 }
 
+ul{
+  list-style-type: none;
+}
+
+li {
+  font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+}
+
+h1 {
+  margin-bottom: 10%;
+  font-size: 54px;
+  font-family: "Russo One";
+}
+
+h4 {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Russo One";
+
+}
 
 .panel-default>.panel-heading {
   background-color: transparent;

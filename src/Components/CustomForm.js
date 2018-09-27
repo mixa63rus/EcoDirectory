@@ -14,10 +14,31 @@ export default class CustomForm extends Component {
     render() {
         return (
             <div className="customfinder">
+                <h4><b>
+                    <span style={{ color: "#FF0000"}}>С</span>
+                    <span style={{ color: "#FF6600"}}>П</span>    
+                    <span style={{ color: "#FFFF00"}}>Р</span>    
+                    <span style={{ color: "#008000"}}>А</span>    
+                    <span style={{ color: "#00FFFF"}}>В</span>    
+                    <span style={{ color: "#0000FF"}}>О</span>    
+                    <span style={{ color: "#9933FF"}}>Ч</span>    
+                    <span style={{ color: "#FF0000"}}>Н</span>    
+                    <span style={{ color: "#FF6600"}}>И</span>    
+                    <span style={{ color: "#FFFF00"}}>К </span>    
+                    <span style={{ color: "#008000"}}>П</span>    
+                    <span style={{ color: "#00FFFF"}}>О </span>    
+                    <span style={{ color: "#0000FF"}}>О</span>    
+                    <span style={{ color: "#9933FF"}}>Т</span>    
+                    <span style={{ color: "#FF0000"}}>Х</span>    
+                    <span style={{ color: "#FF6600"}}>О</span>    
+                    <span style={{ color: "#FFFF00"}}>Д</span>    
+                    <span style={{ color: "#008000"}}>А</span>    
+                    <span style={{ color: "#00FFFF"}}>М</span>    
+                </b></h4>
                 <form className="ford">
                     <FormGroup bsSize="small">
                         <InputGroup>
-                            <FormControl type="text" placeholder="Что искать?" value={this.props.value} onChange={this.props.onChange} />
+                            <FormControl type="text" placeholder="Что искать?" value={this.props.value} onChange={this.props.onChange} autoFocus/>
                             <InputGroup.Button>
                             <Button bsSize="small" type="submit" onClick={this.props.onClick}>
                                 <Glyphicon glyph="search" />
@@ -27,13 +48,13 @@ export default class CustomForm extends Component {
                     </FormGroup>
                 </form>
                 <ul className="list">
-                    {this.props.data.map((elem, index) => elem.value.includes(this.props.value) ? 
+                    {this.props.data.map((elem, index) => elem.value.toLowerCase().includes(this.props.value) ? 
                         <li key={index}>
                             <Panel id="collapsible-panel-example-3">
                                 <Panel.Toggle componentClass="a">{elem.value}</Panel.Toggle>
                                 <Panel.Collapse>
                                     <Panel.Body>
-                                        {elem.label}
+                                        <p>{elem.label}</p>
                                     </Panel.Body>
                                 </Panel.Collapse>
                             </Panel>
